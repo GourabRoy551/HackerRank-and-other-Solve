@@ -1,24 +1,8 @@
-# n = int(input())
-# a = list(map(int, input().split()))
-# print(a)
-# #print(type(a))
-#
-# for i in range(n):
-#     if a[i] == a[i+1]:
-#         print("OK")
-#         break
-#     else:
-#         print("BYE BYE")
+import collections
 
-p = input("Write something: ")
+dict1 = {'day1': 'Mon', 'day2': 'Tue'}
+dict2 = {'day3': 'Wed', 'day4': 'Thu'}
 
-print(p)
-print(type(p))
+res1 = collections.ChainMap(dict1,dict2)
 
-x = list(p)
-print(x)
-
-for i in range(len(x)):
-    if x[i] == x[i+1]:
-        print("Go Nuts")
-        break
+print(res1.maps)
